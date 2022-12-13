@@ -4,6 +4,7 @@
         <field name="name">inherit_view_cycle_manager_default_form</field>
         <field name="model">g2p.cycle.manager.default</field>
         <field name="inherit_id" ref="g2p_programs.view_cycle_manager_default_form" />
+        <field name="priority">100</field>
         <field name="arch" type="xml">
             <xpath expr="/form/sheet/group" position="replace">
                 <group string="Cycle Settings" name="cycle_settings">

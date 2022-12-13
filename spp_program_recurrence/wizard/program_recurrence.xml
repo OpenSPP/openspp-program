@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="program_recurrence_form" model="ir.ui.view">
+        <field name="name">program_recurrence_form</field>
+        <field name="model">g2p.program.create.wizard</field>
+        <field name="inherit_id" ref="g2p_programs.create_program_wizard_form_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='cycle']" position="replace">
+                <page string="Configure the Cycle Manager" name="cycle">
+                    <group>
+                        <group>
+                            <field name="auto_approve_entitlements" />
+                            <field
+                                name="approver_group_id"
+                                options="{'no_open':True,'no_create':True,'no_create_edit':True}"
+                                domain="[('category_id','=',%(g2p_registry_base.openg2p_module)d)]"
+                            />
+                        </group>
+                        <group>
+                            <label for="cycle_duration" />
+                            <span>
+                                <div class="o_col">
+                                    <div class="o_row">
+                                        <field name="cycle_duration" />
+                                        <field name="rrule_type" />
+                                    </div>
+                                </div>
+                            </span>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

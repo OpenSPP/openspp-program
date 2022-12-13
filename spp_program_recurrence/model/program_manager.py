@@ -5,10 +5,9 @@ from datetime import datetime
 
 from odoo import models
 
-_logger = logging.getLogger(__name__)
+from odoo.addons.g2p_programs.models.constants import MANAGER_CYCLE
 
-# Same value with openg2p_program.g2p_programs.models.constants.MANAGER_CYCLE
-MANAGER_CYCLE = 2
+_logger = logging.getLogger(__name__)
 
 
 class DefaultProgramManager(models.Model):

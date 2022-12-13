@@ -10,6 +10,14 @@ _logger = logging.getLogger(__name__)
 
 
 class G2PCreateNewProgramWiz(models.TransientModel):
+    """
+    Inherits the g2p.program.create.wizard model to add below field/s:
+    rrule_type
+
+    to overwrite function/s:
+    create_program
+    """
+
     _inherit = "g2p.program.create.wizard"
 
     rrule_type = fields.Selection(
@@ -22,6 +30,15 @@ class G2PCreateNewProgramWiz(models.TransientModel):
     )
 
     def create_program(self):
+        """
+        Overwrite this function of model g2p.program.create.wizard to add
+        rrule_type field when creating record for model g2p.cycle.manager.default
+
+        Creates different records to different models that is connected to the
+        model g2p.program
+        Returns:
+            action: dict
+        """
         self._check_required_fields()
         for rec in self:
             # Create a new journal for this program

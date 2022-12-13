@@ -1,7 +1,7 @@
 # Part of OpenSPP. See LICENSE file for full copyright and licensing details.
 
 import logging
-from datetime import timedelta
+from datetime import date, timedelta
 
 from dateutil.relativedelta import relativedelta
 
@@ -13,6 +13,14 @@ _logger = logging.getLogger(__name__)
 
 
 class DefaultCycleManager(models.Model):
+    """
+    Inherits the g2p.cycle.manager.default model to add below field/s:
+    rrule_type
+
+    to overwrite function/s:
+    new_cycle
+    """
+
     _inherit = "g2p.cycle.manager.default"
 
     rrule_type = fields.Selection(
@@ -23,7 +31,15 @@ class DefaultCycleManager(models.Model):
         readonly=False,
     )
 
-    def new_cycle(self, name, new_start_date, sequence):
+    def new_cycle(self, name: str, new_start_date: date, sequence: int):
+        """
+        Overwrite this function of model g2p.cycle.manager.default to modify the
+        end date based on the rrule_type value
+
+        Create a cycle record for cycle manager
+        Returns:
+            cycle: the newly created cycle
+        """
         _logger.info("Creating new cycle for program %s", self.program_id.name)
         _logger.info("New start date: %s", new_start_date)
 

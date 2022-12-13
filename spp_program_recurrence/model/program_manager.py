@@ -12,10 +12,18 @@ MANAGER_CYCLE = 2
 
 
 class DefaultProgramManager(models.Model):
+    """
+    Inherit g2p.program.manager.default model to overwrite below function/s:
+    new_cycle
+    """
+
     _inherit = "g2p.program.manager.default"
 
     def new_cycle(self):
         """
+        Overwrite this function of model g2p.program.manager.default to modify the
+        start date passed as an argument in the new_cycle parameter
+
         Create the next cycle of the program
         Returns:
             cycle: the newly created cycle

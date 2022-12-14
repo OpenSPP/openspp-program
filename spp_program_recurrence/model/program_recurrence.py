@@ -31,13 +31,18 @@ class G2PCreateNewProgramWiz(models.TransientModel):
 
     def create_program(self):
         """
+        Creates different records to different models that is connected to the
+        model g2p.program
+
         Overwrite this function of model g2p.program.create.wizard to add
         rrule_type field when creating record for model g2p.cycle.manager.default
 
-        Creates different records to different models that is connected to the
-        model g2p.program
-        Returns:
-            action: dict
+        :return: dict with the following keys: name, type, res_model, view_mode, res_id
+        :rtype: dict
+
+        :example:
+
+            self.create_program()
         """
         self._check_required_fields()
         for rec in self:

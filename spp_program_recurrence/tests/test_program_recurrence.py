@@ -25,10 +25,10 @@ class G2PCreateNewProgramWizTest(TransactionCase):
             }
         )
 
-    def test__ut__method__create_program__success(self):
+    def test_create_program_success(self):
         result = self.program_wizard_1.create_program()
         self.assertIsNotNone(result)
 
-    def test__ut__method__create_program__user_error(self):
+    def test_create_program_user_error(self):
         with self.assertRaises(UserError):
             self.program_wizard_2.create_program()

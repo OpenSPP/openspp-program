@@ -3,6 +3,7 @@
 from datetime import datetime, timedelta
 
 from dateutil.relativedelta import relativedelta
+from freezegun import freeze_time
 
 from odoo.tests import tagged
 from odoo.tests.common import TransactionCase
@@ -10,6 +11,7 @@ from odoo.tests.common import TransactionCase
 from odoo.addons.g2p_programs.models.constants import MANAGER_CYCLE
 
 
+@freeze_time("2022-12-02")
 @tagged("post_install", "-at_install")
 class DefaultCycleManagerTest(TransactionCase):
     @classmethod
@@ -31,7 +33,7 @@ class DefaultCycleManagerTest(TransactionCase):
         program = cls.env[result["res_model"]].browse(result["res_id"])
         cls.cycle_manager = program.get_manager(MANAGER_CYCLE)
 
-    def test__method__new_cycle__daily(self):
+    def test_new_cycle_daily(self):
         start_date = datetime.now()
         end_date = start_date + timedelta(days=self.cycle_manager.cycle_duration)
         sequence = 1
@@ -42,7 +44,7 @@ class DefaultCycleManagerTest(TransactionCase):
         self.assertEqual(cycle.end_date, end_date.date())
         self.assertEqual(cycle.sequence, sequence)
 
-    def test__method__new_cycle__yearly(self):
+    def test_new_cycle_yearly(self):
 
         self.cycle_manager.rrule_type = "yearly"
         self.cycle_manager.cycle_duration = 1
@@ -57,7 +59,7 @@ class DefaultCycleManagerTest(TransactionCase):
         self.assertEqual(cycle.end_date, end_date.date())
         self.assertEqual(cycle.sequence, sequence)
 
-    def test__method__new_cycle__monthyl(self):
+    def test_new_cycle_monthly(self):
 
         self.cycle_manager.rrule_type = "monthly"
         self.cycle_manager.cycle_duration = 1
@@ -72,7 +74,7 @@ class DefaultCycleManagerTest(TransactionCase):
         self.assertEqual(cycle.end_date, end_date.date())
         self.assertEqual(cycle.sequence, sequence)
 
-    def test__method__new_cycle__weekly(self):
+    def test_new_cycle_weekly(self):
 
         self.cycle_manager.rrule_type = "weekly"
         self.cycle_manager.cycle_duration = 1

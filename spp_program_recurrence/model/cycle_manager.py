@@ -33,12 +33,24 @@ class DefaultCycleManager(models.Model):
 
     def new_cycle(self, name: str, new_start_date: date, sequence: int):
         """
+        Create a cycle record for cycle manager
+
         Overwrite this function of model g2p.cycle.manager.default to modify the
         end date based on the rrule_type value
 
-        Create a cycle record for cycle manager
-        Returns:
-            cycle: the newly created cycle
+        :param str name: Name of the cycle.
+        :param datetime new_start_date: start date of the cycle.
+        :param int sequence: number of sequnce of a cycle per program
+        :return: record of g2p.cycle
+        :rtype: g2p.cycle object
+
+        :example:
+
+        >>> name = "Cycle 1"
+        >>> start_date = datetime.now()
+        >>> sequence = 1
+        >>> cycle = self.new_cycle(name, start_date, sequence)
+
         """
         _logger.info("Creating new cycle for program %s", self.program_id.name)
         _logger.info("New start date: %s", new_start_date)

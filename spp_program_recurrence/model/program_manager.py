@@ -20,12 +20,17 @@ class DefaultProgramManager(models.Model):
 
     def new_cycle(self):
         """
+        Create the next cycle of the program
+
         Overwrite this function of model g2p.program.manager.default to modify the
         start date passed as an argument in the new_cycle parameter
 
-        Create the next cycle of the program
-        Returns:
-            cycle: the newly created cycle
+        :return: record of g2p.cycle
+        :rtype: g2p.cycle object
+
+        :example
+
+        >>> cycle = self.new_cycle()
         """
         for rec in self:
             cycles = self.env["g2p.cycle"].search(

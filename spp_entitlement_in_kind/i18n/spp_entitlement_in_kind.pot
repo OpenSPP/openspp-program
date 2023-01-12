@@ -99,6 +99,21 @@ msgid "Cycle In-Kind Entitlements"
 msgstr ""
 
 #. module: spp_entitlement_in_kind
+#: model:ir.model.fields,field_description:spp_entitlement_in_kind.field_g2p_cycle__dms_directory_ids
+#: model:ir.model.fields,field_description:spp_entitlement_in_kind.field_g2p_entitlement__dms_directory_ids
+#: model:ir.model.fields,field_description:spp_entitlement_in_kind.field_g2p_program_create_wizard__dms_directory_ids
+#: model:ir.model.fields,field_description:spp_entitlement_in_kind.field_g2p_program_create_wizard_entitlement_item__dms_directory_ids
+#: model:ir.model.fields,field_description:spp_entitlement_in_kind.field_g2p_program_entitlement_manager__dms_directory_ids
+#: model:ir.model.fields,field_description:spp_entitlement_in_kind.field_g2p_program_entitlement_manager_inkind__dms_directory_ids
+#: model:ir.model.fields,field_description:spp_entitlement_in_kind.field_g2p_program_entitlement_manager_inkind_item__dms_directory_ids
+#: model:ir.model.fields,field_description:spp_entitlement_in_kind.field_procurement_group__dms_directory_ids
+#: model:ir.model.fields,field_description:spp_entitlement_in_kind.field_stock_move__dms_directory_ids
+#: model:ir.model.fields,field_description:spp_entitlement_in_kind.field_stock_picking__dms_directory_ids
+#: model:ir.model.fields,field_description:spp_entitlement_in_kind.field_stock_rule__dms_directory_ids
+msgid "DMS Directories"
+msgstr ""
+
+#. module: spp_entitlement_in_kind
 #: model:ir.model.fields,help:spp_entitlement_in_kind.field_g2p_program_create_wizard_entitlement_item__uom_id
 #: model:ir.model.fields,help:spp_entitlement_in_kind.field_g2p_program_entitlement_manager_inkind_item__uom_id
 msgid "Default unit of measure used for all stock operations."
@@ -248,11 +263,6 @@ msgstr ""
 #. module: spp_entitlement_in_kind
 #: model:ir.actions.act_window,name:spp_entitlement_in_kind.action_entitlement_inkind
 msgid "In-kind Entitlements"
-msgstr ""
-
-#. module: spp_entitlement_in_kind
-#: model:ir.model.fields,field_description:spp_entitlement_in_kind.field_g2p_cycle__picking_ids
-msgid "In-kind Stock Transfers"
 msgstr ""
 
 #. module: spp_entitlement_in_kind
@@ -425,6 +435,11 @@ msgstr ""
 #. module: spp_entitlement_in_kind
 #: model:ir.model,name:spp_entitlement_in_kind.model_stock_rule
 msgid "Stock Rule"
+msgstr ""
+
+#. module: spp_entitlement_in_kind
+#: model:ir.model.fields,field_description:spp_entitlement_in_kind.field_g2p_cycle__picking_ids
+msgid "Stock Transfers"
 msgstr ""
 
 #. module: spp_entitlement_in_kind

@@ -115,6 +115,15 @@ msgid "Cycle Cash Entitlements"
 msgstr ""
 
 #. module: g2p_entitlement_cash
+#: model:ir.model.fields,field_description:g2p_entitlement_cash.field_g2p_program_create_wizard__dms_directory_ids
+#: model:ir.model.fields,field_description:g2p_entitlement_cash.field_g2p_program_create_wizard_entitlement_cash_item__dms_directory_ids
+#: model:ir.model.fields,field_description:g2p_entitlement_cash.field_g2p_program_entitlement_manager__dms_directory_ids
+#: model:ir.model.fields,field_description:g2p_entitlement_cash.field_g2p_program_entitlement_manager_cash__dms_directory_ids
+#: model:ir.model.fields,field_description:g2p_entitlement_cash.field_g2p_program_entitlement_manager_cash_item__dms_directory_ids
+msgid "DMS Directories"
+msgstr ""
+
+#. module: g2p_entitlement_cash
 #: model:ir.model.fields,field_description:g2p_entitlement_cash.field_g2p_program_create_wizard_entitlement_cash_item__display_name
 #: model:ir.model.fields,field_description:g2p_entitlement_cash.field_g2p_program_entitlement_manager_cash__display_name
 #: model:ir.model.fields,field_description:g2p_entitlement_cash.field_g2p_program_entitlement_manager_cash_item__display_name

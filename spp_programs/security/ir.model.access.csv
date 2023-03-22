@@ -40,3 +40,4 @@ spp_programs_stock_location_program_validator,SPP Entitlement Stock Location Pro
 spp_programs_stock_location_route_program_validator,SPP Entitlement Stock Location Route Program Validator Access,stock.model_stock_location_route,g2p_programs.g2p_program_validator,1,0,0,0
 spp_programs_stock_move_program_validator,SPP Entitlement Stock Move Program Validator Access,stock.model_stock_move,g2p_programs.g2p_program_validator,1,1,1,0
 spp_programs_stock_rule_program_validator,SPP Entitlement Stock Rule Program Validator Access,stock.model_stock_rule,g2p_programs.g2p_program_validator,1,0,0,0
+g2p_cycle_membership_program_validator,Cycle Membership Program Validator Access,g2p_programs.model_g2p_cycle_membership,g2p_programs.g2p_program_validator,1,1,1,0

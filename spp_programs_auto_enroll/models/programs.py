@@ -1,9 +1,9 @@
 # Part of OpenSPP. See LICENSE file for full copyright and licensing details.
 
 import logging
+from datetime import timedelta
 
-from odoo import _, models, fields
-from datetime import datetime, timedelta
+from odoo import fields, models
 
 _logger = logging.getLogger(__name__)
 
@@ -19,8 +19,9 @@ class CustomG2PProgram(models.Model):
 
     def cron_auto_enroll(self):
         future_last_updated_date = fields.Datetime.now() - timedelta(minutes=5)
-        programs = self.env["g2p.program"].search([("state", "=", "active"),
-                                                   ("auto_enroll", "=", True)])
+        programs = self.env["g2p.program"].search(
+            [("state", "=", "active"), ("auto_enroll", "=", True)]
+        )
         if programs:
             for program in programs:
                 program.import_eligible_registrants()
@@ -29,4 +30,3 @@ class CustomG2PProgram(models.Model):
 
                 program.last_updated_date = future_last_updated_date
         return
-

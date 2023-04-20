@@ -11,9 +11,13 @@ Part of OpenSPP. See LICENSE file for full copyright and licensing details.
         <field name="arch" type="xml">
             <xpath expr="//group[@name='accounting']" position="after">
                 <group string="Auto Enroll" colspan="4" col="4">
-                    <field name="auto_enroll" colspan="2"/>
-                    <field name="auto_enroll_status" colspan="2" attrs="{'invisible':[('auto_enroll','=',False)]}"/>
-                    <field name="last_updated_date" colspan="4"/>
+                    <field name="auto_enroll" colspan="2" />
+                    <field
+                        name="auto_enroll_status"
+                        colspan="2"
+                        attrs="{'invisible':[('auto_enroll','=',False)]}"
+                    />
+                    <field name="last_updated_date" colspan="4" />
                 </group>
             </xpath>
         </field>

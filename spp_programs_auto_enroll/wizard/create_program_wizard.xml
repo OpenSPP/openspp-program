@@ -16,7 +16,11 @@ Part of OpenSPP. See LICENSE file for full copyright and licensing details.
                             <field name="auto_enroll" colspan="2" />
                         </group>
                         <group>
-                            <field name="auto_enroll_status" colspan="2" attrs="{'invisible':[('auto_enroll','=',False)]}"/>
+                            <field
+                                name="auto_enroll_status"
+                                colspan="2"
+                                attrs="{'invisible':[('auto_enroll','=',False)]}"
+                            />
                         </group>
                     </group>
                 </page>

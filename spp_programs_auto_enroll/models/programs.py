@@ -22,11 +22,8 @@ class CustomG2PProgram(models.Model):
         programs = self.env["g2p.program"].search(
             [("state", "=", "active"), ("auto_enroll", "=", True)]
         )
-        if programs:
-            for program in programs:
-                program.import_eligible_registrants()
-                if program.auto_enroll_status == "enrolled":
-                    program.enroll_eligible_registrants()
-
-                program.last_updated_date = future_last_updated_date
-        return
+        for program in programs:
+            program.import_eligible_registrants()
+            if program.auto_enroll_status == "enrolled":
+                program.enroll_eligible_registrants()
+        return programs.write({"program.last_updated_date": future_last_updated_date})

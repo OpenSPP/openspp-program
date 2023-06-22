@@ -11,7 +11,7 @@ _logger = logging.getLogger(__name__)
 class CustomG2PProgram(models.Model):
     _inherit = "g2p.program"
 
-    auto_enroll = fields.Boolean(default=False)
+    auto_enroll = fields.Boolean()
     auto_enroll_status = fields.Selection(
         selection=[("draft", "Draft"), ("enrolled", "Enrolled")], default="draft"
     )

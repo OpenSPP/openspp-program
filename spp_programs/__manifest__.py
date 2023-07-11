@@ -26,6 +26,7 @@
         "views/programs_view.xml",
         "views/registrant_view.xml",
         "views/inkind_entitlement_report_view.xml",
+        "views/res_config_settings_views.xml",
         "views/managers/eligibility_manager_view.xml",
         "wizard/inkind_entitlement_report_wiz.xml",
         "wizard/create_program_wizard.xml",

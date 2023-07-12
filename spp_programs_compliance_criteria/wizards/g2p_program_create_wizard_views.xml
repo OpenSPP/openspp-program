@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="create_program_wizard_form_view_inherit_spp_programs_compliance_criteria" model="ir.ui.view">
+        <field name="name">g2p.program.create.wizard.view.form.inherit</field>
+        <field name="model">g2p.program.create.wizard</field>
+        <field name="inherit_id" ref="g2p_programs.create_program_wizard_form_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='entitlement_kind']" position="before">
+                <field name="auto_compliance" colspan="4" />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

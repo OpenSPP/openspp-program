@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="program_list_filter_inherit_spp_programs_compliance_criteria" model="ir.ui.view">
+        <field name="name">g2p.program.view.search.inherit</field>
+        <field name="model">g2p.program</field>
+        <field name="inherit_id" ref="g2p_programs.program_list_filter" />
+        <field name="arch" type="xml">
+            <xpath expr="//group" position="inside">
+                <filter
+                    name="grp_auto_compliance"
+                    string="Automated Compliance"
+                    context="{'group_by': 'auto_compliance'}"
+                />
+            </xpath>
+            <xpath expr="//filter[@name='inactive']" position="after">
+                <separator />
+                <filter string="Ongoing Cycle" name="ongoing" domain="[('ongoing_cycle', '=', True)]" />
+                <filter string="Non-going Cycle" name="non-going" domain="[('ongoing_cycle', '=', False)]" />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_program_list_tree_inherit_spp_programs_compliance_criteria" model="ir.ui.view">
+        <field name="name">g2p.program.view.list.inherit</field>
+        <field name="model">g2p.program</field>
+        <field name="inherit_id" ref="g2p_programs.view_program_list_tree" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='target_type']" position="after">
+                <field name="auto_compliance" />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_program_list_form_inherit_spp_programs_compliance_criteria" model="ir.ui.view">
+        <field name="name">g2p.program.view.form.inherit</field>
+        <field name="model">g2p.program</field>
+        <field name="inherit_id" ref="g2p_programs.view_program_list_form" />
+        <field name="priority">10000</field>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook/page[last()]/group[last()]" position="after">
+                <group name="auto_compliance" string="Automated Compliance" colspan="4" col="4">
+                    <field name="auto_compliance" widget="boolean_toggle" />
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

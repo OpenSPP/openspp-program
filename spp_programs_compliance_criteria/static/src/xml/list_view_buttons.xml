@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<template xml:space="preserve">
+
+    <t t-extend="ListView.buttons">
+        <t t-jquery="button.o_list_export_xlsx" t-operation="before">
+            <button
+                type="button"
+                class="btn btn-success o_list_button_filter_valid_enrolled_beneficiaries"
+                accesskey="o"
+                title="Filter Valid Enrolled Beneficiaries"
+            ><i class="fa fa-filter" /> Valid Beneficiaries</button>
+        </t>
+    </t>
+
+</template>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="compliance_criteria_cron" model="ir.cron">
+        <field name="name">## Program: Auto-Compliance Criteria</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+        <field name="model_id" ref="model_g2p_program" />
+        <field name="code">model.compliance_criteria()</field>
+        <field name="state">code</field>
+    </record>
+
+</odoo>

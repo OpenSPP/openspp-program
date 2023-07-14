@@ -135,5 +135,5 @@ class TestG2pProgram(Common):
         )
         self.assertTrue(
             bool(program_create_queue_jobs.ids),
-            "Job should not be created since auto compliance is False!",
+            "Job should not be created since auto compliance is True!",
         )

@@ -97,7 +97,6 @@ class G2pProgram(models.Model):
             [
                 ("auto_compliance", "=", True),
                 ("state", "=", "active"),
-                ("ongoing_cycle", "=", True),
             ]
         )
         for rec in records:
@@ -125,7 +124,8 @@ class G2pProgram(models.Model):
         )
         beneficiaries_to_paused.write({"state": "paused"})
         ongoing_cycles = self.cycle_ids.filtered(
-            lambda cycle: cycle.start_date <= fields.Date.today() <= cycle.end_date
+            lambda cycle: fields.Date.today() <= cycle.end_date
+            and cycle.state in ["draft", "to_approve"]
         )
         cycle_beneficiaries_to_paused = (
             self.env["g2p.cycle.membership"]

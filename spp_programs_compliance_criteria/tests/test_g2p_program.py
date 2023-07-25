@@ -85,6 +85,7 @@ class TestG2pProgram(Common):
                 "eligibility_domain": f"[['id', '!=', {self._test_group_2.id}]]",
             }
         )
+        self.cycle.state = "to_approve"
         self.program._compliance_criteria()
         program_group_1_beneficiary = self.program.program_membership_ids.filtered(
             lambda pm: pm.partner_id == self._test_group_1

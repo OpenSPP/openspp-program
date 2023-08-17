@@ -96,7 +96,7 @@ class InKindEntitlement(models.Model):
         default="draft",
         copy=False,
     )
-
+    a = "string val"
     _sql_constraints = [
         (
             "unique_entitlement_code",

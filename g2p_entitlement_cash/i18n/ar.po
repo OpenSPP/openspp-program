@@ -75,7 +75,6 @@ msgstr "مدراء الاستحقاقات النقدية"
 #. module: g2p_entitlement_cash
 #: code:addons/g2p_entitlement_cash/models/entitlement_manager.py:0
 #, fuzzy, python-format
-#| msgid "Cash Entitlement"
 msgid "Cash Entitlements"
 msgstr "مستحقات نقدية"
 
@@ -136,7 +135,6 @@ msgstr "أدخل اسم المدير ..."
 #. module: g2p_entitlement_cash
 #: code:addons/g2p_entitlement_cash/models/entitlement_manager.py:0
 #, fuzzy, python-format
-#| msgid "Cash Entitlement"
 msgid "Entitlement"
 msgstr "مستحقات نقدية"
 
@@ -170,7 +168,6 @@ msgstr "مجموعة التحقق من الاستحقاق"
 #. module: g2p_entitlement_cash
 #: code:addons/g2p_entitlement_cash/models/entitlement_manager.py:0
 #, fuzzy, python-format
-#| msgid "Entitlement Validation Group"
 msgid "Entitlements Validated and Approved."
 msgstr "مجموعة التحقق من الاستحقاق"
 
@@ -184,7 +181,6 @@ msgstr ""
 #. module: g2p_entitlement_cash
 #: code:addons/g2p_entitlement_cash/models/entitlement_manager.py:0
 #, fuzzy, python-format
-#| msgid "Entitlement Validation Group"
 msgid "Entitlements are validated and approved."
 msgstr "مجموعة التحقق من الاستحقاق"
 

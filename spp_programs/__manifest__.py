@@ -18,6 +18,7 @@
         "product",
         "stock",
         "web_domain_field",
+        "spp_service_points",
     ],
     "data": [
         "security/ir.model.access.csv",

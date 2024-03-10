@@ -74,7 +74,6 @@ msgstr "Gestionnaires de prestations comptants"
 #. module: g2p_entitlement_cash
 #: code:addons/g2p_entitlement_cash/models/entitlement_manager.py:0
 #, fuzzy, python-format
-#| msgid "Cash Entitlement"
 msgid "Cash Entitlements"
 msgstr "Prestation comptant"
 
@@ -137,7 +136,6 @@ msgstr "Entrez le nom du gestionnaire..."
 #. module: g2p_entitlement_cash
 #: code:addons/g2p_entitlement_cash/models/entitlement_manager.py:0
 #, fuzzy, python-format
-#| msgid "Cash Entitlement"
 msgid "Entitlement"
 msgstr "Prestation"
 
@@ -171,7 +169,6 @@ msgstr "Groupe de validation des prestations"
 #. module: g2p_entitlement_cash
 #: code:addons/g2p_entitlement_cash/models/entitlement_manager.py:0
 #, fuzzy, python-format
-#| msgid "Entitlement Validation Group"
 msgid "Entitlements Validated and Approved."
 msgstr "Groupe de validation des prestations"
 
@@ -185,7 +182,6 @@ msgstr "Les prestations ne sont pas approuvés en raison de certains problèmes.
 #. module: g2p_entitlement_cash
 #: code:addons/g2p_entitlement_cash/models/entitlement_manager.py:0
 #, fuzzy, python-format
-#| msgid "Entitlement Validation Group"
 msgid "Entitlements are validated and approved."
 msgstr "Les prestations sont validées et approuvées."
 
